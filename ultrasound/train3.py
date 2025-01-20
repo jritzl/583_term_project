@@ -152,7 +152,7 @@ def main():
     print(f"Loaded {len(images)} images with shape: {images[0].shape}")
     print(f"Labels: {np.unique(labels)}")
     
-    num_classes = 10
+    num_classes = 2
     latent_dim = 100
     
     config = 'ACGAN-batch_size-[{}]-steps-[{}]'.format(batch_size, iterations)
@@ -212,7 +212,7 @@ def main():
         # Train discriminator
         real_img, hair_tags = next(iter(shuffler))  
         real_img, hair_tags = real_img.to(device), hair_tags.to(device)
-        num_classes = 10  # Number of MNIST classes
+        num_classes = 2  # Number of MNIST classes
         real_tag = torch.nn.functional.one_hot(hair_tags, num_classes=num_classes).float()  # Shape: [batch_size, num_classes]
 
         z = torch.randn(batch_size, latent_dim).to(device)
