@@ -1,3 +1,5 @@
+Most of the code is inspired by https://github.com/bchao1/Anime-Generation
+
 This is a README file for implementing the project code. The project consists of three parts: ultrasound classification, MNIST and CIFAR classification, and MATLAB code.
 
 The MATLAB implementation includes a single matlab.m file that works with the digitdataset and CIFAR-10 datasets. For the digit dataset, the implementation uses fitcecoc up to line 52. Inputs are sourced from MATLAB toolboxes, divided into training and testing datasets. The model is then trained, tested using the predict function, and the accuracy is calculated. Finally, a confusion matrix is generated.
